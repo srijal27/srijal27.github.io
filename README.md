@@ -4,24 +4,32 @@ Personal academic website for Sweta Rijal, Doctoral Candidate in Political Scien
 
 ## Structure
 
-- `index.html` — Home / About page
-- `research.html` — Research interests, projects, publications
-- `contact.html` — Contact info and links
-- `style.css` — Shared styling for all pages
+This is a single-page site — everything lives in `index.html`, split into
+sections you scroll (or jump to) via the nav bar:
+
+- **Header** — name, one-line title, bio, CV link
+- **Research** (`#research`) — research interest tags + publications list
+- **Works in Progress** (`#projects`) — working papers / dissertation chapters
+- **Contact** (`#contact`) — email and department info
+- `style.css` — all styling (fonts, colors, layout, animations)
 
 ## Editing content
 
-Each page is plain HTML — open the file in any text editor and edit the text
-between the tags. Look for `[bracketed placeholder text]` — those are the
-spots meant to be filled in.
+Open `index.html` in any text editor. Look for `[bracketed placeholder text]`
+or `<!-- comments -->` — those mark the spots meant to be filled in:
 
-To add a new page (e.g. a CV or Teaching page):
-1. Copy `contact.html` as a starting template (it has the shared header/nav/footer).
-2. Rename it, e.g. `teaching.html`.
-3. Replace the `<main>` content with your new content.
-4. Add a link to it in the `<nav class="site-nav">` block on **every** page
-   (index.html, research.html, contact.html, and any new pages) so the
-   navigation stays consistent.
+- Add your real email in the header and Contact section
+- Link your actual CV PDF in the "CV (PDF)" link
+- Add publications by copying an existing `<div class="paper">...</div>`
+  block under Research and filling in the title, venue, year, authors,
+  links, and abstract
+- Add working papers the same way under Works in Progress
+
+To add a whole new section (e.g. Teaching):
+1. Copy one of the existing `<section>` blocks as a template.
+2. Give it a new `id` (e.g. `id="teaching"`).
+3. Add a matching link in the `<ul class="nav-links">` block, e.g.
+   `<li><a href="#teaching">Teaching</a></li>`.
 
 ## Publishing changes
 
@@ -31,7 +39,7 @@ live site within a minute or two, since this repo is named
 
 ```bash
 git add .
-git commit -m "Update research page"
+git commit -m "Update research section"
 git push
 ```
 

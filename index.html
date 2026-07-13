@@ -1,38 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweta Rijal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sweta Rijal | Political Science PhD Candidate, UC Berkeley</title>
+  <meta name="description" content="Sweta Rijal is a Doctoral Candidate in Political Science at UC Berkeley, researching AI governance, international political economy, tech policy, and data work.">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <header class="site-header">
-      <h1>Sweta Rijal</h1>
-      <p class="subtitle">Doctoral Candidate, Political Science, UC Berkeley</p>
-      <nav class="site-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="research.html">Research</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+
+  <nav>
+    <div class="page">
+      <a class="nav-name" href="#top">Sweta Rijal</a>
+      <ul class="nav-links">
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Works in Progress</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page">
+    <header id="top">
+      <p class="eyebrow">Doctoral Candidate &middot; University of California, Berkeley</p>
+      <h1>Sweta Rijal<span class="hero-email"><!-- replace with your email --></span></h1>
+      <p class="hero-desc">
+        I am a Doctoral Candidate in the Department of Political Science at the
+        University of California, Berkeley. My research examines AI governance,
+        international political economy, technology policy, and data work,
+        exploring how emerging technologies reshape global economic and
+        political structures.
+      </p>
+      <p class="hero-desc placeholder-note">
+        [Add more about your academic path, advisor, or lab here.]
+      </p>
+      <div class="hero-links">
+        <a href="#"><!-- replace # with a link to your CV PDF -->CV (PDF)</a>
+      </div>
     </header>
-
-    <main>
-      <h2>About</h2>
-      <p>
-        I am a doctoral candidate in the Department of Political Science at
-        UC Berkeley. My work sits at the intersection of AI governance,
-        international political economy, and technology policy.
-      </p>
-      <p class="placeholder">
-        [Add more about your background, advisor, and academic path here.]
-      </p>
-    </main>
-
-    <footer class="site-footer">
-      <p>&copy; 2026 Sweta Rijal</p>
-    </footer>
   </div>
+
+  <div class="page">
+    <section id="research">
+      <h2>Research</h2>
+
+      <div class="interests">
+        <span class="interest-tag">AI Governance</span>
+        <span class="interest-tag">International Political Economy</span>
+        <span class="interest-tag">Tech Policy</span>
+        <span class="interest-tag">Data Work</span>
+      </div>
+
+      <p class="placeholder-note">
+        [List your publications and working papers here, following this format:]
+      </p>
+
+      <div class="paper" style="margin-top: 1.5rem;">
+        <div class="paper-title"><a href="#" target="_blank">[Paper Title]</a></div>
+        <div class="paper-meta">
+          <span class="venue">[Journal / Venue]</span> &nbsp;&middot;&nbsp; [Year] &nbsp;&middot;&nbsp; [Author list]
+        </div>
+        <div class="paper-links">
+          <button class="abstract-toggle">&#9656; Abstract</button>
+          <a href="#" target="_blank">[Working Paper]</a>
+        </div>
+        <div class="abstract-panel">[Paste your abstract here.]</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="page">
+    <section id="projects">
+      <h2>Works in Progress</h2>
+
+      <div class="paper">
+        <div class="paper-title">[Add a working paper or dissertation chapter title here]</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="page">
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-block">
+        <p>I welcome questions about my research or potential collaborations.</p>
+        <div class="contact-grid">
+          <div>
+            <div class="contact-item-label">Email</div>
+            <span class="placeholder-note">[add your email here]</span>
+          </div>
+          <div>
+            <div class="contact-item-label">Department</div>
+            Department of Political Science<br>University of California, Berkeley
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="page">
+      <p>Sweta Rijal &nbsp;&middot;&nbsp; UC Berkeley Department of Political Science &nbsp;&middot;&nbsp; Updated 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+  <script>
+    document.querySelectorAll('.abstract-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var panel = this.closest('.paper').querySelector('.abstract-panel');
+        var expanded = panel.classList.toggle('show');
+        this.textContent = expanded ? '▾ Abstract' : '▸ Abstract';
+      });
+    });
+  </script>
+
 </body>
 </html>
