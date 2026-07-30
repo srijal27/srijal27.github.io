@@ -217,28 +217,6 @@ h2 {
   margin-bottom: 0.3rem;
 }
 
-/* CV entries */
-.cv-group + .cv-group { margin-top: 2.8rem; }
-.cv-entry {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1.5rem;
-  padding: 0.9rem 0;
-  border-top: 1px solid var(--rule);
-}
-.cv-entry:first-of-type { border-top: none; padding-top: 0; }
-.cv-entry-main { flex: 1; }
-.cv-entry-title { font-size: 1.02rem; font-weight: 500; }
-.cv-entry-sub { font-size: 0.9rem; color: var(--ink-light); margin-top: 0.15rem; }
-.cv-entry-date {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.78rem;
-  color: var(--ink-faint);
-  white-space: nowrap;
-}
-.cv-page section:last-of-type { border-bottom: none; }
-
 /* Footer */
 footer { padding: 2.5rem 0; text-align: center; }
 footer p {
@@ -257,5 +235,4 @@ footer p {
 @media (max-width: 600px) {
   .nav-links { gap: 1.2rem; }
   .contact-grid { grid-template-columns: 1fr; gap: 1.2rem; }
-  .cv-entry { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
 }
